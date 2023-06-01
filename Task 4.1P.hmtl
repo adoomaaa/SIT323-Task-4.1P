@@ -1,0 +1,16 @@
+const express = require('express');
+const app = express();
+app.get('/add', (req, res) => {
+const num1 = parseInt(req.query.num1);
+const num2 = parseInt(req.query.num2);
+const result = num1 + num2;
+res.json({ result });
+});
+app.get('/subtract', (req, res) => {
+const num1 = parseInt(req.query.num1);
+const num2 = parseInt(req.query.num2);
+const result = num1 - num2;
+res.json({ result });
+});
+app.get('/multiply', (req, res) => {
+const num1 = parseInt(req.query.num1);
